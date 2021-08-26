@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+/* 
+    Navigation Style
+*/
+#nav-btn{
+    display: none;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5em;
+    
+}
+.navigation{
+    display: flex;
+    width: 1240px;
+    min-height: 6em;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(252, 252, 252);
+	box-shadow: 0px 5px 16px rgb(201, 200, 200);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.navigation .logo{
+    height: 54px;
+    margin-left: 2em;
+}
+.navigation .logo img{
+    height: 100%;
+    width: 80%;
+}
+.navigation .page-links{
+    margin-left: auto;
+    display: flex;
+    font-size: large;
+    padding: .5em;
+    margin-right: 2.5em;
+}
+.navigation .page-links .page-link{
+    align-items: center;
+    justify-content: center;
+    margin: auto 1em;
+}
+.navigation .page-links .page-link a{
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    transition: ease-in-out color .2s; 
+}
+.navigation .page-links #active a, .navigation .page-links .page-link:hover a{
+    color: #fc7fb2;  
+}
+.navigation .social-links{
+    display: flex;
+    margin: 0 2em;
+}
+.navigation .social-links .social-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid lightgray;
+    border-radius: 21px;
+    padding: 12px;
+    margin: .2em;
+    cursor: pointer;
+    transition: ease-in-out background-color .2s; 
+}
+
+.navigation .social-links .social-icon a{
+    width: 100%; 
+    height: 100%;
+}
+.navigation .social-links .social-icon:hover{
+    background-color: #fc7fb2;
+}
+.navigation .social-links .social-icon:hover a svg{
+    fill: white;
+    transition: ease-in-out background-color .2s; 
+}
+.hamburger-menu label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2em;
+}
+.hamburger-menu label h1{
+        color: black;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 500;
+        transition: ease-in-out color .2s;
+        user-select: none;
+        cursor: pointer;
+}
+#hamburger-menu-icon{
+    width: 18px;
+    margin-right: .5em;
+}
+
+
+.box{
+  display: flex;
+  width: 1240px;
+  min-height: 26em;
+  background-color: #274957;
+  border-radius: 5px;
+  overflow: hidden;
+  align-self: center;
+  margin-top:40px ;
+}
+
+.box1{
+    display: flex;
+    width: 500px;
+    height: 300px;
+    margin-top:60px ;
+    margin-left: 50px;
+    background-color: #efe9ef;
+    border-radius: 5px;
+}
+
+.video{
+    display: flex;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.ko{
+    
+    width: 450px;
+    height: 250px;
+    margin-top:20px ;
+    margin-left: 20px;
+    background-color: #efe9ef;
+
+}
+
+.ko p{
+    color: #696769;
+    font-size: 50px;
+    line-height: 80px;
+}
+
+.mi p{
+    
+    color: #4b4848;
+    font-size: 18px;
+    background-color: #efe9ef;
+    line-height: 27px;
+}
+
+
+  
+  .newbox1{
+    display: flex;
+    width: 1240px;
+    height: 470px;
+    margin-top:30px ;
+    align-self: center;
+    background-color: #efe9ef;
+    border-radius: 5px;
+}
+
+.text{
+    
+    width: 1150px;
+    height: 200px;
+    margin-top:20px ;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    background-color: #efe9ef;
+    
+
+}
+
+.text p{
+    color: #696769;
+    font-size: 50px;
+    line-height: 80px;
+
+}
+
+.text1 p{
+    color: #4b4848;
+    font-size: 18px;
+    background-color: #efe9ef;
+    line-height: 27px;
+
+}
+.kraj {
+    background-color: #696769;
+}
+.kraj p{
+    font-size: 11px;
+}
+
+
+/*Styles for phones*/
+
+/*navigaton*/
+@media only screen and (min-width: 800px) {
+    .hamburger-menu{
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 800px) {
+    .navigation{
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navigation .page-links{
+      display: none;
+    }
+    #nav-btn:checked ~ .navigation{
+        height: 15em;
+        align-items: flex-start;
+        padding-top: 1.5em
+    }
+    #nav-btn:checked ~ .navigation .page-links{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 7em;
+    }
+    #nav-btn:checked ~ .navigation .page-links .page-link{
+        margin: .5em 1em;
+    }
+    
+/* moje uredjenje*/
+
+    .box{
+        width: 500px;
+        height: 200px;
+
+    }
+    .box1{
+        width: 350px;
+        margin-right: 50px;
+        
+
+    }
+
+
+    .newbox1{
+        width: 500px;
+        height: 650px;
+    }
+
+    .ko p{
+        color: #696769;
+        font-size: 40px;
+        line-height: 80px;
+    }
+    
+    .mi p{
+        
+        color: #4b4848;
+        font-size: 14px;
+        background-color: #efe9ef;
+        line-height: 27px;
+    }
+
+    .text p{
+        color: #696769;
+        font-size: 40px;
+        line-height: 80px;
+    
+    }
+    
+    .text1 p{
+        color: #4b4848;
+        font-size: 14px;
+        background-color: #efe9ef;
+        line-height: 27px;
+    
+    }
+
+    .text {
+
+        height: 650px;
+        
+    }
+
+    .ko{
+        width: 350px;
+    }
+
+  }
+  
+ 
+
+  @media only screen and (max-width: 1100px) {
+
+    
+    .video{
+
+        display: none;
+    }
+
+    .box{
+        display: flex;
+        align-items: center;
+        background-color: #d1cdca;
+        flex-direction: column;
+        width: 800px;
+        
+    }
+    .newbox1{
+        width: 500px;
+        height: 650px;
+        
+    }
+    .text1 p{
+       
+        font-size: 14px;
+        background-color: #efe9ef;
+        line-height: 27px;
+    
+    }
+  }
+
+  
